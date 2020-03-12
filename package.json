@@ -10,7 +10,7 @@
   "scripts": {
     "start": "node index.js",
     "gcr:build": "gcloud builds submit --tag gcr.io/sapient-helix-265423/dnd-badge",
-    "gcr:deploy": "gcloud run deploy traction-scripts --image gcr.io/sapient-helix-265423/dnd-badge --platform managed --allow-unauthenticated --region=us-central1"
+    "gcr:deploy": "gcloud run deploy dnd-badge --image gcr.io/sapient-helix-265423/dnd-badge --platform managed --allow-unauthenticated --region=us-central1"
   },
   "husky": {
     "hooks": {
