@@ -56,7 +56,7 @@ polka()
     const xp = get(character, 'currentXp', 0);
     res.json({
       label: 'XP',
-      message: xp,
+      message: xp.toString(),
       color: '#D81E5B',
     });
   })
