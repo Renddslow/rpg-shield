@@ -7,7 +7,11 @@
   "license": "MIT",
   "author": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "start": "node index.js",
+    "gcr:build": "gcloud builds submit --tag gcr.io/sapient-helix-265423/dnd-badge",
+    "gcr:deploy": "gcloud run deploy traction-scripts --image gcr.io/sapient-helix-265423/dnd-badge --platform managed --allow-unauthenticated --region=us-central1"
+  },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
@@ -24,5 +28,11 @@
     "husky": "^4.2.3",
     "lint-staged": "^10.0.8",
     "prettier": "^1.19.1"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dot-prop": "^5.2.0",
+    "got": "^10.6.0",
+    "polka": "^0.5.2"
   }
 }
